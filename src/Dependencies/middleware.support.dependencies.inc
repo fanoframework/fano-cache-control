@@ -6,13 +6,15 @@
  * @license   [[LICENSE_URL]] ([[LICENSE]])
  *------------------------------------------------------------- *)
 
-container.add('appMiddlewares', TMiddlewareListFactory.create());
+// container.add('appMiddlewares', TMiddlewareListFactory.create());
 
-container.add(
-    GuidToString(IDispatcher),
-    TDispatcherFactory.create(
-        container['appMiddlewares'] as IMiddlewareLinkList,
-        getRouteMatcher(),
-        TRequestResponseFactory.create()
-    )
-);
+// container.add(
+//     GuidToString(IDispatcher),
+//     TDispatcherFactory.create(
+//         container['appMiddlewares'] as IMiddlewareLinkList,
+//         getRouteMatcher(),
+//         TRequestResponseFactory.create()
+//     )
+// );
+
+container.add('cacheControl', TCacheControlMiddlewareFactory.create().useETag());
