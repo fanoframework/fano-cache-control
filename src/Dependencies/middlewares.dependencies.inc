@@ -6,6 +6,4 @@
  * @license   [[LICENSE_URL]] ([[LICENSE]])
  *------------------------------------------------------------- *)
 
-{%dependencies.inc}
-
-{---put your dependencies registration here---}
+container.add('cacheControl', TCacheControlMiddlewareFactory.create().useETag());

@@ -7,9 +7,7 @@
  *------------------------------------------------------------- *)
 
 {$INCLUDE main.dependencies.inc}
-
-{---put your dependencies registration here---}
-{ container.add('db', TMySqlDbFactory.create()); }
+{$INCLUDE middlewares.dependencies.inc}
 {$INCLUDE models.dependencies.inc}
 {$INCLUDE views.dependencies.inc}
 {$INCLUDE controllers.dependencies.inc}
